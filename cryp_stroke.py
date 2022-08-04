@@ -63,4 +63,4 @@ if st.button('Predict'):
     st.markdown('## Risk grouping:  '+str(result))
     if result == 'Low Risk':
         st.balloons()
-    st.markdown('## Probability:  '+str(prob)+'%'
+    st.markdown('## Probability:  '+str(prob)+'%')
