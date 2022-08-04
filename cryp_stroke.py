@@ -21,7 +21,7 @@ st.title('Machine Learning Application for Predicting Cryptogenic stroke')
 
 # conf
 col1, col2, col3 = st.columns(3)
-RoPE = col1.number_input('Age',step=1,value=4)
+RoPE = col1.number_input('RoPE',step=1,value=4)
 SD = col2.selectbox("Stroke distribution",('Anterior circulation','Posterior circulation','Anterior/posterior circulation'))
 SOS = col3.selectbox("Side of hemisphere",('Left','Right','Bilateral'))
 NOS = col1.selectbox("Site of stroke lesion",('Cortex','Cortex-subcortex','Subcortex','Brainstem','Cerebellum'))
