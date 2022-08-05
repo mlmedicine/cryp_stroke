@@ -13,7 +13,10 @@ from xgboost import XGBClassifier
 from imblearn.over_sampling import RandomOverSampler
 
 #应用主题
-
+st.set_page_config(
+    page_title="ML Medicine",
+    page_icon=":Rabbit:",
+)
 #应用标题
 st.title('Machine Learning Application for Predicting Cryptogenic stroke')
 
@@ -23,11 +26,11 @@ st.title('Machine Learning Application for Predicting Cryptogenic stroke')
 col1, col2, col3 = st.columns(3)
 RoPE = col1.number_input('RoPE',step=1,value=4)
 SD = col2.selectbox("Stroke distribution",('Anterior circulation','Posterior circulation','Anterior/posterior circulation'))
-SOS = col3.selectbox("Side of hemisphere",('Left','Right','Bilateral'))
-NOS = col1.selectbox("Site of stroke lesion",('Cortex','Cortex-subcortex','Subcortex','Brainstem','Cerebellum'))
+SOS = col3.selectbox("Site of stroke lesion",('Cortex','Cortex-subcortex','Subcortex','Brainstem','Cerebellum'))
+NOS = col1.selectbox("Number of stroke lesions",('Single stroke lesion','Multiple stroke lesions'))
 Ddimer = col2.number_input('D-dimer (ng/mL)',value=174)
 BNP = col3.number_input('BNP (pg/mL)',value=93)
-map = {'Left':0,'Right':1,'Bilateral':2,
+map = {'Single stroke lesion':0,'Multiple stroke lesions':1,
        'Anterior circulation':0,'Posterior circulation':1,'Anterior/posterior circulation':2,
        'Cortex':0,'Cortex-subcortex':1,'Subcortex':2,'Brainstem':3,'Cerebellum':4,
        'No':0,'Yes':1}
