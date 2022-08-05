@@ -15,7 +15,7 @@ from imblearn.over_sampling import RandomOverSampler
 #应用主题
 st.set_page_config(
     page_title="ML Medicine",
-    page_icon=":Rabbit:",
+    page_icon="🐇",
 )
 #应用标题
 st.title('Machine Learning Application for Predicting Cryptogenic stroke')
